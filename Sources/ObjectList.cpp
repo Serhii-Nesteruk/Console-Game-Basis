@@ -1,17 +1,13 @@
 #include "../Headers/ObjectList.h"
 
 void CGB::ObjectsList::emplace_back(const WorldObject &worldObj, const std::string &personalCode) {
-    Object object;
-    object.obj = worldObj;
-    object.personalCode = personalCode;
+    Object object = Object(worldObj, personalCode);
 
     objects.emplace_back(object);
 }
 
 void CGB::ObjectsList::push_back(const WorldObject &worldObj, const std::string &personalCode) {
-    Object object;
-    object.obj = worldObj;
-    object.personalCode = personalCode;
+    Object object = Object(worldObj, personalCode);
 
     objects.push_back(object);
 }
@@ -55,4 +51,22 @@ CGB::ObjectsList::Object &CGB::ObjectsList::find(const std::string &personalCode
         if (obj.personalCode == personalCode)
             return obj;
     throw std::exception("Error: ObjectsList: object not found!");
+}
+
+void CGB::ObjectsList::reset(const CGB::Position &where, const WorldObject &what,//TODO: const?
+                             const std::string &personalCode) {
+    //TODO: use range-based for / refactor
+    Object obj = Object(what, personalCode);
+
+    for (unsigned int i = 0; i < this->size(); ++i) {
+        if (objects.at(i).obj.getPosition() == where)
+            objects.at(i) = Object(what, personalCode);
+    }
+}
+
+CGB::ObjectsList::Object &CGB::ObjectsList::Object::operator=(const CGB::ObjectsList::Object &other) {
+    this->obj = other.obj;
+    this->personalCode = other.personalCode;
+
+    return *this;
 }

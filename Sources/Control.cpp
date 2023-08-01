@@ -2,16 +2,16 @@
 
 #include <conio.h>
 
-void CGB::ControlPlayer::connectToMap(CGB::Map &map) {
+void CGB::Control::connectToMap(CGB::Map &map) {
     this->map = map;
 }
 
-void CGB::ControlPlayer::pressKey() {
+void CGB::Control::pressKey() {
     char input = _getch();
     keyInterpretation(input);
 }
 
-bool CGB::ControlPlayer::isKeyPressed(const Keyboard &key) {
+bool CGB::Control::isKeyPressed(const Keyboard &key) {
     if (key == activeKey) {
         checkControlMode();
         return true;
@@ -19,7 +19,7 @@ bool CGB::ControlPlayer::isKeyPressed(const Keyboard &key) {
     return false;
 }
 
-void CGB::ControlPlayer::keyInterpretation(char input) {
+void CGB::Control::keyInterpretation(char input) {
     toUpperCase(input);
 
     switch(input) {
@@ -101,12 +101,12 @@ void CGB::ControlPlayer::keyInterpretation(char input) {
 
 }
 
-void CGB::ControlPlayer::toUpperCase(char &ch) {
+void CGB::Control::toUpperCase(char &ch) {
     if (std::isalpha(ch))
         ch = static_cast<char>(std::toupper(ch));
 }
 
-void CGB::ControlPlayer::checkControlMode() {
+void CGB::Control::checkControlMode() {
     if (playerControlMode == ControlMode::KEYS_STICKING) {
         //We don't do anything here, we leave the if body empty;
     }
@@ -114,26 +114,40 @@ void CGB::ControlPlayer::checkControlMode() {
         activeKey = Keyboard::NONE;
 }
 
-//TODO: refactor `move object`
-void CGB::ControlPlayer::move(const CGB::ControlPlayer::Direction &direction, const std::string &personalCode) {
-    WorldObject &obj = map.getObject(personalCode);
+//TODO: refactor, `move object`
+void CGB::Control::move(const CGB::Control::Direction &direction, CGB::WorldObject &obj,
+                              const std::string &personalCode) {
     int objX = obj.getPosition().x;
     int objY = obj.getPosition().y;
 
     //clear last position
-   map.objectReset(Position(objX, objY), map.getObject(Map::spaceCode),
-                   Map::spaceCode);
+    map.objectReset(Position(objX, objY), map.getObject(Map::spaceCode),
+                    Map::spaceCode);
 
-   if (direction == Direction::RIGHT)
-       ++objX;
-   if (direction == Direction::LEFT)
-       --objX;
-   if (direction == Direction::UP)
-       --objY;
-   if (direction == Direction::DOWN)
-       ++objY;
-
+    if (direction == Direction::RIGHT)
+        ++objX;
+    if (direction == Direction::LEFT)
+        --objX;
+    if (direction == Direction::UP)
+        --objY;
+    if (direction == Direction::DOWN)
+        ++objY;
 
     obj.setPosition(Position(objX, objY));
     map.objectReset(Position(objX, objY), obj, personalCode);
+}
+
+//TODO: refator
+void CGB::Control::checkWall(WorldObject &obj, const ControlMode &wallCondition) {
+    this->wallCondition = wallCondition;
+    //TODO: use range-based for
+    if (wallCondition == ControlMode::SOLID_WALL)
+        for (unsigned int i = 0; i < map.getObjectsList().size(); ++i)
+            if (map.getObjectsList().at(i).obj.getPosition() == obj.getPosition())//TODO: pattern
+                obj.setPosition(Position(obj.getPosition().x - 1, obj.getPosition().y - 1));
+
+   //if (wallCondition == ControlMode::SNAKE_MODE)
+   //    for (unsigned int i = 0; i < map.getObjectsList().size(); ++i)
+   //        if (map.getObjectsList().at(i).obj.getPosition() == player.getPosition())//TODO: pattern
+   //            player.setPosition(Position());
 }

@@ -44,6 +44,7 @@ namespace CGB {
         WALL = '#',
         SPACE = ' ',
         PLAYER = '*',
+        APPLE = '0'
     };
 
     class Map final {
@@ -87,6 +88,10 @@ namespace CGB {
 
         inline void setObjectSymbol(char symbol, const std::string& personalCode) {
             this->objects.find(personalCode).obj.setSymbol(symbol);
+        }
+
+        inline ObjectsList getObjectsList() const {
+            return this->objects;
         }
 
         inline static const std::string & wallCode = "0";

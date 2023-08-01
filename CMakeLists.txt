@@ -12,4 +12,11 @@ add_executable(CGB
         Headers/Position.h
         Sources/ObjectList.cpp
         Headers/ObjectList.h
-        Headers/Color.h Sources/Control.cpp Headers/Control.h)
+        Headers/Color.h
+        Sources/Control.cpp
+        Headers/Control.h
+)
+
+include_directories(CGB PUBLIC
+        Headers/Control.h
+)

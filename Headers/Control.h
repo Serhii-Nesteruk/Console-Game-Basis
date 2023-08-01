@@ -4,11 +4,13 @@
 
 namespace CGB {
 
-    class ControlPlayer final {
+    class Control final {
     public:
         enum ControlMode {
             KEYS_STICKING,
-            DEFAULT
+            DEFAULT,
+            SOLID_WALL
+          //  SNAKE_MODE
         };
 
         enum Direction {
@@ -23,16 +25,17 @@ namespace CGB {
             SPACE, ESC, CTRL, FN, ALT, NONE
         };
 
-        ControlPlayer() = delete;
+        Control() = delete;
 
-        explicit ControlPlayer(Map& map) : map(map) {}
+        explicit Control(Map& map) : map(map) {}
 
-        ~ControlPlayer() = default;
+        ~Control() = default;
 
         void connectToMap(Map& map);
         void pressKey();
 
-        void move(const Direction &direction, const std::string &personalCode);
+        void move(const Direction &direction, WorldObject& obj,
+                  const std::string &personalCode);
 
         inline void setPlayerControlMode(const ControlMode& controlMode) {
             this->playerControlMode = controlMode;
@@ -42,6 +45,7 @@ namespace CGB {
             return this->playerControlMode;
         }
 
+        void checkWall(WorldObject &player, const ControlMode &wallCondition);
         bool isKeyPressed(const Keyboard &key);
     private:
         void keyInterpretation(char input);
@@ -52,6 +56,7 @@ namespace CGB {
         Keyboard activeKey = Keyboard::NONE;
         Map& map;
         ControlMode playerControlMode = ControlMode::DEFAULT;
+        ControlMode wallCondition = ControlMode::SOLID_WALL;
     };
 
 }

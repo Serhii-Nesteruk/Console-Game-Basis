@@ -11,17 +11,18 @@ namespace CGB {
             : symbol(symbol), color(color), position(position) {}
 
         ~WorldObject() = default;
+        WorldObject operator=(const WorldObject& other);
 
-        inline WorldObject operator=(const WorldObject& other) {
-            this->symbol = other.symbol;
-            this->color = other.color;
-            this->position = other.position;
+        inline bool touchCheck(const Position &pos) const {
+            return this->position == pos;
+        }
 
-            return *this;
+        inline bool touchCheck(const WorldObject& other) const {
+            return this->position == other.position;
         }
 
         inline bool operator==(const WorldObject& other) const {
-            return this->symbol == other.symbol && this->color == other.color;
+            return this->symbol == other.symbol && this->color == other.color && this->position == other.position;
         }
 
         void draw();
@@ -55,4 +56,3 @@ namespace CGB {
         Color color = Color::WHITE;
     };
 }
-

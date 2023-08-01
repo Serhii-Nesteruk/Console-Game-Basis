@@ -84,8 +84,8 @@ void CGB::Map::init() {
 
 void CGB::Map::objectReset(const Position &position, const WorldObject &newObject,
                            const std::string &personalCode) {//TODO: improve
-    objects.emplace_back(newObject, personalCode);
-    objectsCodes.emplace_back(personalCode);
+    objects.reset(position, newObject, personalCode);
+    objectsCodes.emplace_back(personalCode);//TODO: delete
     map.at(position.y).at(position.x) = newObject;
 }
 
