@@ -1,4 +1,4 @@
-#include "../Headers/WorldObject.h"
+#include "WorldObject.h"
 
 #include <iostream>
 
@@ -14,22 +14,3 @@ CGB::WorldObject CGB::WorldObject::operator=(const CGB::WorldObject &other){
 
     return *this;
 }
-
-//TODO: refactor, magic numbers
-//bool CGB::WorldObject::touchCheck(const CGB::WorldObject &other) const {
-//   Position temp = this->position;
-//   temp.x++;
-//   if (temp.x == position.x && temp.y == position.y)
-//       return true;
-//   temp.x -= 2;
-//    if (temp.x == position.x && temp.y == position.y)
-//        return true;
-//    temp.x++;
-//    temp.y++;
-//    if (temp.x == position.x && temp.y == position.y)
-//        return true;
-//    temp.y -= 2;
-//    if (temp.x == position.x && temp.y == position.y)
-//        return true;
-//    return false;
-//}

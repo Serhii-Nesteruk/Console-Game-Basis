@@ -274,16 +274,24 @@ namespace CGB {
         void initUpperAndLowerEdge(int y);
 
         /**
-         * @brief Initializes a wall object at the specified position in the map.
-         * @param position The position to initialize the wall object.
+         * @brief Initializes a wall objects.
          */
-        void initWall(const Position &position);
+        void initWall();
 
         /**
-         * @brief Initializes empty space objects in the map for a specific row.
-         * @param y The y-coordinate of the row to initialize the empty space objects.
+         * @brief Initializes a wall object at the specified position in the map.
          */
-        void initSpace(int y);
+        void initWallUnit(const Position &position);
+
+        /**
+         * @brief Initializes empty space objects in the map.
+         */
+        void initSpace();
+
+        /**
+         * @brief Initializes empty space object in the map for a specific row.
+         */
+        void initSpaceUnit(int y);
 
     private:
         mapType map {};

@@ -20,8 +20,8 @@ namespace CGB {
         enum ControlMode {
             KEYS_STICKING, ///< Control mode where keys are sticky (held down).
             DEFAULT,       ///< Default control mode.
-            SOLID_WALL     ///< Control mode with solid walls (collision stops movement).
-            // SNAKE_MODE   ///< Potential future control mode (commented out for now).
+            SOLID_WALL,     ///< Control mode with solid walls (collision stops movement).
+            SNAKE_MODE   ///< Potential future control mode (commented out for now).
         };
 
         /**
@@ -64,12 +64,6 @@ namespace CGB {
         ~Control() = default;
 
         /**
-         * @brief Connects the Control object to a Map.
-         * @param map The Map object to connect to.
-         */
-        void connectToMap(Map& map);
-
-        /**
          * @brief Handles the key press event.
          */
         void pressKey();
@@ -100,10 +94,12 @@ namespace CGB {
 
         /**
          * @brief Checks for collision with a wall based on the control mode.
-         * @param player The WorldObject representing the player.
+         * @param obj The object whose position is compared with the position of the wall.
+         * @param lastPosition = The past position of the object
          * @param wallCondition The ControlMode to consider for the wall condition.
          */
-        void checkWall(WorldObject &player, const ControlMode &wallCondition);
+        void checkWall(WorldObject &obj, const Position &lastPosition,
+                       const ControlMode &wallCondition = ControlMode::SOLID_WALL);
 
         /**
          * @brief Checks if a specific keyboard key is currently pressed.
@@ -111,6 +107,14 @@ namespace CGB {
          * @return True if the key is pressed, otherwise false.
          */
         bool isKeyPressed(const Keyboard &key);
+
+        /**
+         * @brief Set the wall condition for the object.
+         * @param wallCondition The ControlMode enum representing the desired wall condition.
+         */
+        inline void setWallCondition(const ControlMode &wallCondition) {
+            this->wallCondition = wallCondition;
+        }
 
     private:
         /**
@@ -130,11 +134,18 @@ namespace CGB {
          */
         void checkControlMode();
 
+        /**
+         * @brief Set the last position if the object touches a wall.
+         * @param obj The WorldObject whose last position may need to be updated.
+         * @param lastPosition The previous Position of the object before the contact with the wall.
+         */
+        void setLastPositionIfTouchWall(WorldObject &obj, const Position& lastPosition);
+
     private:
         Keyboard activeKey = Keyboard::NONE;   ///< The currently active keyboard key.
         Map& map;                              ///< Reference to the connected Map object.
         ControlMode playerControlMode = ControlMode::DEFAULT;   ///< The current player control mode.
-        ControlMode wallCondition = ControlMode::SOLID_WALL;    ///< The current wall collision condition.
+        ControlMode wallCondition;    ///< The current wall collision condition.
     };
 
 }

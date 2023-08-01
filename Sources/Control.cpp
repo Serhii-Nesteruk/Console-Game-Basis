@@ -1,10 +1,6 @@
-#include "../Headers/Control.h"
+#include "Control.h"
 
 #include <conio.h>
-
-void CGB::Control::connectToMap(CGB::Map &map) {
-    this->map = map;
-}
 
 void CGB::Control::pressKey() {
     char input = _getch();
@@ -137,18 +133,27 @@ void CGB::Control::move(const CGB::Control::Direction &direction, CGB::WorldObje
     map.objectReset(Position(objX, objY), obj, personalCode);
 }
 
-//TODO: refator
-void CGB::Control::checkWall(WorldObject &obj, const ControlMode &wallCondition) {
-    this->wallCondition = wallCondition;
-    //TODO: use range-based for
-    if (wallCondition == ControlMode::SOLID_WALL)
-        for (unsigned int i = 0; i < map.getObjectsList().size(); ++i)
-            if (map.getObjectsList().at(i).personalCode == Map::wallCode &&
-                map.getObjectsList().at(i).obj.getPosition() == obj.getPosition())//TODO: pattern
-                obj.setPosition(Position(obj.getPosition().x - 1, obj.getPosition().y - 1));
+//TODO: this function is not working, to fix
+void CGB::Control::checkWall(WorldObject &obj, const Position &lastPosition, const ControlMode &wallCondition_) {
+    setWallCondition(wallCondition_);
 
-   //if (wallCondition == ControlMode::SNAKE_MODE)
-   //    for (unsigned int i = 0; i < map.getObjectsList().size(); ++i)
-   //        if (map.getObjectsList().at(i).obj.getPosition() == player.getPosition())//TODO: pattern
-   //            player.setPosition(Position());
+    switch(wallCondition_) {
+        case ControlMode::SOLID_WALL:
+            setLastPositionIfTouchWall(obj, lastPosition);
+            break;
+        case ControlMode::SNAKE_MODE:
+            //TODO: implement me
+            break;
+        case ControlMode::DEFAULT:
+            throw std::exception("Error: the state of the wall cannot be ControlMode::DEFAULT");
+            break;
+        case ControlMode::KEYS_STICKING:
+            throw std::exception("Error: the state of the wall cannot be ControlMode::KEYS_STICKING");
+    }
+}
+
+void CGB::Control::setLastPositionIfTouchWall(CGB::WorldObject &object, const Position& lastPosition) {
+    for (auto &obj: map.getObjectsList())
+        if (obj.personalCode == Map::wallCode && object.touchCheck(obj.obj))
+            object.setPosition(lastPosition);
 }

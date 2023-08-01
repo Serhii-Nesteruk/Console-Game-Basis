@@ -85,6 +85,22 @@ namespace CGB {
         Object& at(unsigned int index);
 
         /**
+         * @brief Returns an iterator pointing to the last element in the vector of objects
+         * @return An iterator pointing to the last element in the vector.
+         */
+        inline std::vector<Object>::iterator end() {
+            return objects.end();
+        }
+
+        /**
+         * @brief Returns an iterator pointing to the first element in the vector of objects
+         * @return An iterator pointing to the first element in the vector.
+         */
+        inline std::vector<Object>::iterator begin() {
+            return objects.begin();
+        }
+
+        /**
          * @brief Checks if the ObjectsList is empty.
          * @return True if the ObjectsList is empty, otherwise false.
          */
