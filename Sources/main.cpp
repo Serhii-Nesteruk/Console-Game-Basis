@@ -8,27 +8,27 @@ int score = 0;
 bool isEnd = false;
 
 void checkTouchApple(WorldObject& apple, WorldObject& player, Map& map) {
-    if (player.touchCheck(apple)) {
+    if (player.touchCheck(apple)) {//TODO:
         Position randPosApple = Position(rand() % map.getSizeMap().x, rand() % map.getSizeMap().y);
 
-        apple.setPosition(randPosApple);//TODO
+        apple.setPosition(randPosApple);
         ++score;
     }
 }
 
-void control(ControlPlayer &controlPlayer, WorldObject& player) {
-    controlPlayer.pressKey();
+void control(Control &playerControl, WorldObject& player) {
+    playerControl.pressKey();
 
-    if (controlPlayer.isKeyPressed(ControlPlayer::Keyboard::W))
-        controlPlayer.move(ControlPlayer::Direction::UP, player, "player");
-    if (controlPlayer.isKeyPressed(ControlPlayer::Keyboard::D))
-        controlPlayer.move(ControlPlayer::Direction::RIGHT, player, "player");
-    if (controlPlayer.isKeyPressed(ControlPlayer::Keyboard::S))
-        controlPlayer.move(ControlPlayer::Direction::DOWN, player, "player");
-    if (controlPlayer.isKeyPressed(ControlPlayer::Keyboard::A))
-        controlPlayer.move(ControlPlayer::Direction::LEFT, player, "player");
+    if (playerControl.isKeyPressed(Control::Keyboard::W))
+        playerControl.move(Control::Direction::UP, player, "player");
+    if (playerControl.isKeyPressed(Control::Keyboard::D))
+        playerControl.move(Control::Direction::RIGHT, player, "player");
+    if (playerControl.isKeyPressed(Control::Keyboard::S))
+        playerControl.move(Control::Direction::DOWN, player, "player");
+    if (playerControl.isKeyPressed(Control::Keyboard::A))
+        playerControl.move(Control::Direction::LEFT, player, "player");
 
-    controlPlayer.checkWall(player, ControlPlayer::ControlMode::SOLID_WALL);
+    playerControl.checkWall(player, Control::ControlMode::SOLID_WALL);
 }
 
 int main() {
@@ -36,7 +36,7 @@ int main() {
     std::srand(static_cast<unsigned>(std::time(nullptr)));
 
     Map map(SizeMap(20, 15));
-    ControlPlayer controlPlayer(map);
+    Control playerControl(map);
 
     WorldObject player(Symbol::PLAYER, Color::RED, Position(5, 5));
     WorldObject apple(Symbol::APPLE, Color::GREEN, Position(8, 8));
@@ -49,7 +49,7 @@ int main() {
 
         map.draw();
         std::cout << "SCORE:" << score << "\t";
-        control(controlPlayer, player);
+        control(playerControl, player);
         checkTouchApple(apple, player, map);
     }
 

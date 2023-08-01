@@ -143,7 +143,8 @@ void CGB::Control::checkWall(WorldObject &obj, const ControlMode &wallCondition)
     //TODO: use range-based for
     if (wallCondition == ControlMode::SOLID_WALL)
         for (unsigned int i = 0; i < map.getObjectsList().size(); ++i)
-            if (map.getObjectsList().at(i).obj.getPosition() == obj.getPosition())//TODO: pattern
+            if (map.getObjectsList().at(i).personalCode == Map::wallCode &&
+                map.getObjectsList().at(i).obj.getPosition() == obj.getPosition())//TODO: pattern
                 obj.setPosition(Position(obj.getPosition().x - 1, obj.getPosition().y - 1));
 
    //if (wallCondition == ControlMode::SNAKE_MODE)
