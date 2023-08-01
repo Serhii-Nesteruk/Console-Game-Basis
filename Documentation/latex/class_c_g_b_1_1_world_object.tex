@@ -1,0 +1,234 @@
+\doxysection{CGB\+::World\+Object Class Reference}
+\hypertarget{class_c_g_b_1_1_world_object}{}\label{class_c_g_b_1_1_world_object}\index{CGB::WorldObject@{CGB::WorldObject}}
+
+
+The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} class represents an object in the game world.  
+
+
+
+
+{\ttfamily \#include $<$World\+Object.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_g_b_1_1_world_object_ac81f7555b3fd3a59652716f4e14b23ef}\label{class_c_g_b_1_1_world_object_ac81f7555b3fd3a59652716f4e14b23ef} 
+{\bfseries World\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates a \doxylink{class_c_g_b_1_1_world_object}{World\+Object} with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_g_b_1_1_world_object_ac813ffae2267a9889ed0ae7cd7583afa}{World\+Object}} (char symbol, const Color \&color, const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&position=\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}(0, 0))
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. Creates a \doxylink{class_c_g_b_1_1_world_object}{World\+Object} with the given symbol, color, and position. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_world_object_a9f172fc39e49fe84effa6f9af0d86a5c}\label{class_c_g_b_1_1_world_object_a9f172fc39e49fe84effa6f9af0d86a5c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+World\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \mbox{\hyperlink{class_c_g_b_1_1_world_object_a4c29ae5f97f2618b05f44e6a61b67521}{operator=}} (const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&other)
+\begin{DoxyCompactList}\small\item\em Overloaded assignment operator. Assigns the properties of another \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to this object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_g_b_1_1_world_object_a0d645b68483e3983a4518bb9830cad72}{touch\+Check}} (const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&pos) const
+\begin{DoxyCompactList}\small\item\em Checks if the object touches a specific position in the game world. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_g_b_1_1_world_object_ab0340bb9bdcada379583fb7823537844}{touch\+Check}} (const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if the object touches another \doxylink{class_c_g_b_1_1_world_object}{World\+Object} in the game world. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_g_b_1_1_world_object_ab17857ae7f416ae0fe6b2de413461cc5}{operator==}} (const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&other) const
+\begin{DoxyCompactList}\small\item\em Overloaded equality operator. Checks if two World\+Objects are equal. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_world_object_aa431d5d1d3978f18a076a6a3b7ed4f52}\label{class_c_g_b_1_1_world_object_aa431d5d1d3978f18a076a6a3b7ed4f52} 
+void {\bfseries draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the \doxylink{class_c_g_b_1_1_world_object}{World\+Object} by changing the color and printing the symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \mbox{\hyperlink{class_c_g_b_1_1_world_object_a4392ea7cd3c71805e750de4b9f29dbcb}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current position of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_world_object_aead8f088ebce7a346a3bb3a399038cd1}{set\+Position}} (const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&position)
+\begin{DoxyCompactList}\small\item\em Sets the position of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_world_object_a9ef165fe110c5f9edb838c228bfc379a}{set\+Color}} (const Color \&color)
+\begin{DoxyCompactList}\small\item\em Sets the color of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_c_g_b_1_1_world_object_a0e24ec98da5d61adcee89069cc7a7c3c}{get\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current color of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_world_object_ae34dc4feb7590e1e6bf3b518c9da364a}{set\+Symbol}} (char symbol)
+\begin{DoxyCompactList}\small\item\em Sets the symbol of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_c_g_b_1_1_world_object_a1835691219c7244f270f74d13ce7d5a4}{get\+Symbol}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current symbol of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} class represents an object in the game world. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_g_b_1_1_world_object_ac813ffae2267a9889ed0ae7cd7583afa}\label{class_c_g_b_1_1_world_object_ac813ffae2267a9889ed0ae7cd7583afa} 
+\index{CGB::WorldObject@{CGB::WorldObject}!WorldObject@{WorldObject}}
+\index{WorldObject@{WorldObject}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{WorldObject()}{WorldObject()}}
+{\footnotesize\ttfamily CGB\+::\+World\+Object\+::\+World\+Object (\begin{DoxyParamCaption}\item[{char}]{symbol,  }\item[{const Color \&}]{color,  }\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&}]{position = {\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}(0,~0)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor. Creates a \doxylink{class_c_g_b_1_1_world_object}{World\+Object} with the given symbol, color, and position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The character symbol representing the object. \\
+\hline
+{\em color} & The Color object representing the object\textquotesingle{}s color. \\
+\hline
+{\em position} & The \doxylink{struct_c_g_b_1_1_position}{Position} object representing the object\textquotesingle{}s position (default is (0, 0)). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_g_b_1_1_world_object_a0e24ec98da5d61adcee89069cc7a7c3c}\label{class_c_g_b_1_1_world_object_a0e24ec98da5d61adcee89069cc7a7c3c} 
+\index{CGB::WorldObject@{CGB::WorldObject}!getColor@{getColor}}
+\index{getColor@{getColor}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily Color CGB\+::\+World\+Object\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current color of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. 
+
+\begin{DoxyReturn}{Returns}
+The Color object representing the current color. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_world_object_a4392ea7cd3c71805e750de4b9f29dbcb}\label{class_c_g_b_1_1_world_object_a4392ea7cd3c71805e750de4b9f29dbcb} 
+\index{CGB::WorldObject@{CGB::WorldObject}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} CGB\+::\+World\+Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current position of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. 
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_c_g_b_1_1_position}{Position} object representing the current position. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_world_object_a1835691219c7244f270f74d13ce7d5a4}\label{class_c_g_b_1_1_world_object_a1835691219c7244f270f74d13ce7d5a4} 
+\index{CGB::WorldObject@{CGB::WorldObject}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char CGB\+::\+World\+Object\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current symbol of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. 
+
+\begin{DoxyReturn}{Returns}
+The character symbol representing the current symbol. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_world_object_a4c29ae5f97f2618b05f44e6a61b67521}\label{class_c_g_b_1_1_world_object_a4c29ae5f97f2618b05f44e6a61b67521} 
+\index{CGB::WorldObject@{CGB::WorldObject}!operator=@{operator=}}
+\index{operator=@{operator=}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} CGB\+::\+World\+Object\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Overloaded assignment operator. Assigns the properties of another \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this object after assignment. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_world_object_ab17857ae7f416ae0fe6b2de413461cc5}\label{class_c_g_b_1_1_world_object_ab17857ae7f416ae0fe6b2de413461cc5} 
+\index{CGB::WorldObject@{CGB::WorldObject}!operator==@{operator==}}
+\index{operator==@{operator==}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool CGB\+::\+World\+Object\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded equality operator. Checks if two World\+Objects are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the objects are equal, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_world_object_a9ef165fe110c5f9edb838c228bfc379a}\label{class_c_g_b_1_1_world_object_a9ef165fe110c5f9edb838c228bfc379a} 
+\index{CGB::WorldObject@{CGB::WorldObject}!setColor@{setColor}}
+\index{setColor@{setColor}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void CGB\+::\+World\+Object\+::set\+Color (\begin{DoxyParamCaption}\item[{const Color \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the color of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The Color object representing the new color. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_world_object_aead8f088ebce7a346a3bb3a399038cd1}\label{class_c_g_b_1_1_world_object_aead8f088ebce7a346a3bb3a399038cd1} 
+\index{CGB::WorldObject@{CGB::WorldObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void CGB\+::\+World\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the position of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The \doxylink{struct_c_g_b_1_1_position}{Position} object representing the new position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_world_object_ae34dc4feb7590e1e6bf3b518c9da364a}\label{class_c_g_b_1_1_world_object_ae34dc4feb7590e1e6bf3b518c9da364a} 
+\index{CGB::WorldObject@{CGB::WorldObject}!setSymbol@{setSymbol}}
+\index{setSymbol@{setSymbol}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{setSymbol()}{setSymbol()}}
+{\footnotesize\ttfamily void CGB\+::\+World\+Object\+::set\+Symbol (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the symbol of the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The character symbol representing the new symbol. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_world_object_a0d645b68483e3983a4518bb9830cad72}\label{class_c_g_b_1_1_world_object_a0d645b68483e3983a4518bb9830cad72} 
+\index{CGB::WorldObject@{CGB::WorldObject}!touchCheck@{touchCheck}}
+\index{touchCheck@{touchCheck}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{touchCheck()}{touchCheck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool CGB\+::\+World\+Object\+::touch\+Check (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the object touches a specific position in the game world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The \doxylink{struct_c_g_b_1_1_position}{Position} to check against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the object touches the given position, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_world_object_ab0340bb9bdcada379583fb7823537844}\label{class_c_g_b_1_1_world_object_ab0340bb9bdcada379583fb7823537844} 
+\index{CGB::WorldObject@{CGB::WorldObject}!touchCheck@{touchCheck}}
+\index{touchCheck@{touchCheck}!CGB::WorldObject@{CGB::WorldObject}}
+\doxysubsubsection{\texorpdfstring{touchCheck()}{touchCheck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool CGB\+::\+World\+Object\+::touch\+Check (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the object touches another \doxylink{class_c_g_b_1_1_world_object}{World\+Object} in the game world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to check against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the objects touch each other, otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{_world_object_8h}{World\+Object.\+h}}\end{DoxyCompactItemize}

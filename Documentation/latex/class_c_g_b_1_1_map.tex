@@ -1,0 +1,235 @@
+\doxysection{CGB\+::Map Class Reference}
+\hypertarget{class_c_g_b_1_1_map}{}\label{class_c_g_b_1_1_map}\index{CGB::Map@{CGB::Map}}
+
+
+The \doxylink{class_c_g_b_1_1_map}{Map} class represents the game map and manages the world objects.  
+
+
+
+
+{\ttfamily \#include $<$Map.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_g_b_1_1_map_a440f46f732d6520ae110b146ee31c05e}\label{class_c_g_b_1_1_map_a440f46f732d6520ae110b146ee31c05e} 
+{\bfseries Map} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates an empty \doxylink{class_c_g_b_1_1_map}{Map}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_g_b_1_1_map_a9cd981c6a8b4da1102b9f495609c4917}{Map}} (const \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{Size\+Map}} \&size\+Map)
+\begin{DoxyCompactList}\small\item\em Constructor. Creates a \doxylink{class_c_g_b_1_1_map}{Map} with the given size. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_map_a0d74b3f191733676f31ca2d0501d11ff}\label{class_c_g_b_1_1_map_a0d74b3f191733676f31ca2d0501d11ff} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Map} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_map_a6f93b28f27ebf06bdead3d84dbe4e3d0}{setup}} (const \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{Size\+Map}} \&size\+Map)
+\begin{DoxyCompactList}\small\item\em Sets up the \doxylink{class_c_g_b_1_1_map}{Map} with the specified size. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_map_a7262670a951eb92d3085bb37b49bde0a}\label{class_c_g_b_1_1_map_a7262670a951eb92d3085bb37b49bde0a} 
+void {\bfseries init\+World\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Initializes the world objects on the map. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_map_a880281174619e5e5f7658f759151ea7a}\label{class_c_g_b_1_1_map_a880281174619e5e5f7658f759151ea7a} 
+void {\bfseries init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_c_g_b_1_1_map}{Map}. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_map_acae68391deb5e8885998687ba250e125}\label{class_c_g_b_1_1_map_acae68391deb5e8885998687ba250e125} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{class_c_g_b_1_1_map}{Map} and checks for object changes. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_map_a5b370bffe6c3735283ff6c1540173ab8}\label{class_c_g_b_1_1_map_a5b370bffe6c3735283ff6c1540173ab8} 
+void {\bfseries draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the \doxylink{class_c_g_b_1_1_map}{Map} on the console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_map_af09f3006d350c2930b145e749d41a764}{object\+Reset}} (const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&position, const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&new\+Object, const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Resets the specified object at the given position with a new object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_size_map}{Size\+Map}} \mbox{\hyperlink{class_c_g_b_1_1_map_a58b8ea38baeedda45365a309732320c9}{get\+Size\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_map_a22bdaafe2dc98d660be2f79d51574fcd}{set\+Size\+Map}} (const \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{Size\+Map}} \&size\+Map)
+\begin{DoxyCompactList}\small\item\em Sets the size of the map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \mbox{\hyperlink{class_c_g_b_1_1_map_a319c5b5ba1b4b59370d6a7d8de9035bf}{get\+Obj\+Position}} (const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Gets the position of the object with the specified personal code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \& \mbox{\hyperlink{class_c_g_b_1_1_map_a8799decf015cbf533f10fe940d2e73d5}{get\+Object}} (const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Gets the \doxylink{class_c_g_b_1_1_world_object}{World\+Object} with the specified personal code. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_map_a08903b113574fe9bed6ec70c172741c3}{set\+Object\+Color}} (const Color \&color, const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Sets the color of the object with the specified personal code. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_map_a82bc907d37bf99fd04743c5ba35e1f46}{set\+Object\+Symbol}} (char symbol, const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Sets the symbol of the object with the specified personal code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_g_b_1_1_objects_list}{Objects\+List}} \mbox{\hyperlink{class_c_g_b_1_1_map_a4cd49c6403a575c34463123a72e72552}{get\+Objects\+List}} () const
+\begin{DoxyCompactList}\small\item\em Gets a copy of the list of World\+Objects in the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_g_b_1_1_map_ae209ea725153482fe0df1c8286fc2074}\label{class_c_g_b_1_1_map_ae209ea725153482fe0df1c8286fc2074} 
+static const std\+::string \& {\bfseries wall\+Code} = \"{}0\"{}
+\begin{DoxyCompactList}\small\item\em A string constant representing the personal code for walls in the map. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_map_acccf0193ab4ff77df15dc4caff812d0e}\label{class_c_g_b_1_1_map_acccf0193ab4ff77df15dc4caff812d0e} 
+static const std\+::string \& {\bfseries space\+Code} = \"{}1\"{}
+\begin{DoxyCompactList}\small\item\em A string constant representing the personal code for empty spaces in the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_c_g_b_1_1_map}{Map} class represents the game map and manages the world objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_g_b_1_1_map_a9cd981c6a8b4da1102b9f495609c4917}\label{class_c_g_b_1_1_map_a9cd981c6a8b4da1102b9f495609c4917} 
+\index{CGB::Map@{CGB::Map}!Map@{Map}}
+\index{Map@{Map}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily CGB\+::\+Map\+::\+Map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{Size\+Map}} \&}]{size\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. Creates a \doxylink{class_c_g_b_1_1_map}{Map} with the given size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+Map} & The size of the map as a \doxylink{struct_c_g_b_1_1_size_map}{Size\+Map} object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_g_b_1_1_map_a8799decf015cbf533f10fe940d2e73d5}\label{class_c_g_b_1_1_map_a8799decf015cbf533f10fe940d2e73d5} 
+\index{CGB::Map@{CGB::Map}!getObject@{getObject}}
+\index{getObject@{getObject}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{getObject()}{getObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \& CGB\+::\+Map\+::get\+Object (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \doxylink{class_c_g_b_1_1_world_object}{World\+Object} with the specified personal code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em personal\+Code} & The personal code of the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} with the specified personal code. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_map_a4cd49c6403a575c34463123a72e72552}\label{class_c_g_b_1_1_map_a4cd49c6403a575c34463123a72e72552} 
+\index{CGB::Map@{CGB::Map}!getObjectsList@{getObjectsList}}
+\index{getObjectsList@{getObjectsList}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{getObjectsList()}{getObjectsList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_g_b_1_1_objects_list}{Objects\+List}} CGB\+::\+Map\+::get\+Objects\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a copy of the list of World\+Objects in the map. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} containing all the World\+Objects in the map. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_map_a319c5b5ba1b4b59370d6a7d8de9035bf}\label{class_c_g_b_1_1_map_a319c5b5ba1b4b59370d6a7d8de9035bf} 
+\index{CGB::Map@{CGB::Map}!getObjPosition@{getObjPosition}}
+\index{getObjPosition@{getObjPosition}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{getObjPosition()}{getObjPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} CGB\+::\+Map\+::get\+Obj\+Position (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the position of the object with the specified personal code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em personal\+Code} & The personal code of the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_c_g_b_1_1_position}{Position} of the object with the specified personal code. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_map_a58b8ea38baeedda45365a309732320c9}\label{class_c_g_b_1_1_map_a58b8ea38baeedda45365a309732320c9} 
+\index{CGB::Map@{CGB::Map}!getSizeMap@{getSizeMap}}
+\index{getSizeMap@{getSizeMap}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{getSizeMap()}{getSizeMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{Size\+Map}} CGB\+::\+Map\+::get\+Size\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the size of the map. 
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_c_g_b_1_1_size_map}{Size\+Map} representing the size of the map. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_map_af09f3006d350c2930b145e749d41a764}\label{class_c_g_b_1_1_map_af09f3006d350c2930b145e749d41a764} 
+\index{CGB::Map@{CGB::Map}!objectReset@{objectReset}}
+\index{objectReset@{objectReset}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{objectReset()}{objectReset()}}
+{\footnotesize\ttfamily void CGB\+::\+Map\+::object\+Reset (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{new\+Object,  }\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})}
+
+
+
+Resets the specified object at the given position with a new object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to reset the object. \\
+\hline
+{\em new\+Object} & The new \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to set at the position. \\
+\hline
+{\em personal\+Code} & The personal code associated with the object (optional). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_map_a08903b113574fe9bed6ec70c172741c3}\label{class_c_g_b_1_1_map_a08903b113574fe9bed6ec70c172741c3} 
+\index{CGB::Map@{CGB::Map}!setObjectColor@{setObjectColor}}
+\index{setObjectColor@{setObjectColor}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{setObjectColor()}{setObjectColor()}}
+{\footnotesize\ttfamily void CGB\+::\+Map\+::set\+Object\+Color (\begin{DoxyParamCaption}\item[{const Color \&}]{color,  }\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the color of the object with the specified personal code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The new color to set for the object. \\
+\hline
+{\em personal\+Code} & The personal code of the object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_map_a82bc907d37bf99fd04743c5ba35e1f46}\label{class_c_g_b_1_1_map_a82bc907d37bf99fd04743c5ba35e1f46} 
+\index{CGB::Map@{CGB::Map}!setObjectSymbol@{setObjectSymbol}}
+\index{setObjectSymbol@{setObjectSymbol}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{setObjectSymbol()}{setObjectSymbol()}}
+{\footnotesize\ttfamily void CGB\+::\+Map\+::set\+Object\+Symbol (\begin{DoxyParamCaption}\item[{char}]{symbol,  }\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the symbol of the object with the specified personal code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The new symbol to set for the object. \\
+\hline
+{\em personal\+Code} & The personal code of the object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_map_a22bdaafe2dc98d660be2f79d51574fcd}\label{class_c_g_b_1_1_map_a22bdaafe2dc98d660be2f79d51574fcd} 
+\index{CGB::Map@{CGB::Map}!setSizeMap@{setSizeMap}}
+\index{setSizeMap@{setSizeMap}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{setSizeMap()}{setSizeMap()}}
+{\footnotesize\ttfamily void CGB\+::\+Map\+::set\+Size\+Map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{Size\+Map}} \&}]{size\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the size of the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+Map} & The \doxylink{struct_c_g_b_1_1_size_map}{Size\+Map} representing the new size of the map. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_map_a6f93b28f27ebf06bdead3d84dbe4e3d0}\label{class_c_g_b_1_1_map_a6f93b28f27ebf06bdead3d84dbe4e3d0} 
+\index{CGB::Map@{CGB::Map}!setup@{setup}}
+\index{setup@{setup}!CGB::Map@{CGB::Map}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void CGB\+::\+Map\+::setup (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{Size\+Map}} \&}]{size\+Map }\end{DoxyParamCaption})}
+
+
+
+Sets up the \doxylink{class_c_g_b_1_1_map}{Map} with the specified size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+Map} & The size of the map as a \doxylink{struct_c_g_b_1_1_size_map}{Size\+Map} object. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{_map_8h}{Map.\+h}}\end{DoxyCompactItemize}

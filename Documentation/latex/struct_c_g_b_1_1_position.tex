@@ -1,0 +1,154 @@
+\doxysection{CGB\+::Position Struct Reference}
+\hypertarget{struct_c_g_b_1_1_position}{}\label{struct_c_g_b_1_1_position}\index{CGB::Position@{CGB::Position}}
+
+
+The \doxylink{struct_c_g_b_1_1_position}{Position} struct represents a 2D position in the game world.  
+
+
+
+
+{\ttfamily \#include $<$Position.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_c_g_b_1_1_position_af47a25b0765dfa2cd70aaa881776b58a}\label{struct_c_g_b_1_1_position_af47a25b0765dfa2cd70aaa881776b58a} 
+{\bfseries Position} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates a \doxylink{struct_c_g_b_1_1_position}{Position} with default values (0, 0). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_position_aaefa830f79727e888c4ab349f0dccf6f}{Position}} (int \mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}}, int \mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}})
+\begin{DoxyCompactList}\small\item\em Constructor. Creates a \doxylink{struct_c_g_b_1_1_position}{Position} with the given x and y coordinates. \end{DoxyCompactList}\item 
+\Hypertarget{struct_c_g_b_1_1_position_aff78584b8d2587de4f4c184eaada7955}\label{struct_c_g_b_1_1_position_aff78584b8d2587de4f4c184eaada7955} 
+{\bfseries Position} (\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted move constructor. \doxylink{struct_c_g_b_1_1_position}{Position} objects cannot be moved. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \& \mbox{\hyperlink{struct_c_g_b_1_1_position_a1dea3890bab6293e08f3243b47d7d7b4}{operator=}} (\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted move assignment operator. \doxylink{struct_c_g_b_1_1_position}{Position} objects cannot be moved. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_position_acd8b5552210c089d43303f07d0829622}{Position}} (const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. Creates a copy of another \doxylink{struct_c_g_b_1_1_position}{Position} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \& \mbox{\hyperlink{struct_c_g_b_1_1_position_a8512c590bab9ca591650a6dc271ad26f}{operator=}} (const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. Assigns the properties of another \doxylink{struct_c_g_b_1_1_position}{Position} object to this object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_g_b_1_1_position_a7e5aaa43f4582edefb6e362429db9e6c}{operator==}} (int value) const
+\begin{DoxyCompactList}\small\item\em Equality comparison operator for comparing a \doxylink{struct_c_g_b_1_1_position}{Position} with an integer value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_g_b_1_1_position_a7f6bddf1f12f59628daf5e265224c272}{operator==}} (const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality comparison operator for comparing two \doxylink{struct_c_g_b_1_1_position}{Position} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}\label{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775} 
+int {\bfseries x}
+\begin{DoxyCompactList}\small\item\em The x-\/coordinate of the \doxylink{struct_c_g_b_1_1_position}{Position}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}\label{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a} 
+int {\bfseries y}
+\begin{DoxyCompactList}\small\item\em The y-\/coordinate of the \doxylink{struct_c_g_b_1_1_position}{Position}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_c_g_b_1_1_position}{Position} struct represents a 2D position in the game world. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_c_g_b_1_1_position_aaefa830f79727e888c4ab349f0dccf6f}\label{struct_c_g_b_1_1_position_aaefa830f79727e888c4ab349f0dccf6f} 
+\index{CGB::Position@{CGB::Position}!Position@{Position}}
+\index{Position@{Position}!CGB::Position@{CGB::Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CGB\+::\+Position\+::\+Position (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. Creates a \doxylink{struct_c_g_b_1_1_position}{Position} with the given x and y coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_c_g_b_1_1_position_acd8b5552210c089d43303f07d0829622}\label{struct_c_g_b_1_1_position_acd8b5552210c089d43303f07d0829622} 
+\index{CGB::Position@{CGB::Position}!Position@{Position}}
+\index{Position@{Position}!CGB::Position@{CGB::Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CGB\+::\+Position\+::\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. Creates a copy of another \doxylink{struct_c_g_b_1_1_position}{Position} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{struct_c_g_b_1_1_position}{Position} object to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_c_g_b_1_1_position_a8512c590bab9ca591650a6dc271ad26f}\label{struct_c_g_b_1_1_position_a8512c590bab9ca591650a6dc271ad26f} 
+\index{CGB::Position@{CGB::Position}!operator=@{operator=}}
+\index{operator=@{operator=}!CGB::Position@{CGB::Position}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \& CGB\+::\+Position\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy assignment operator. Assigns the properties of another \doxylink{struct_c_g_b_1_1_position}{Position} object to this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{struct_c_g_b_1_1_position}{Position} object to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this \doxylink{struct_c_g_b_1_1_position}{Position} object after assignment. 
+\end{DoxyReturn}
+\Hypertarget{struct_c_g_b_1_1_position_a1dea3890bab6293e08f3243b47d7d7b4}\label{struct_c_g_b_1_1_position_a1dea3890bab6293e08f3243b47d7d7b4} 
+\index{CGB::Position@{CGB::Position}!operator=@{operator=}}
+\index{operator=@{operator=}!CGB::Position@{CGB::Position}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \& CGB\+::\+Position\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Deleted move assignment operator. \doxylink{struct_c_g_b_1_1_position}{Position} objects cannot be moved. 
+
+\begin{DoxyReturn}{Returns}
+A reference to this \doxylink{struct_c_g_b_1_1_position}{Position} object after assignment. 
+\end{DoxyReturn}
+\Hypertarget{struct_c_g_b_1_1_position_a7f6bddf1f12f59628daf5e265224c272}\label{struct_c_g_b_1_1_position_a7f6bddf1f12f59628daf5e265224c272} 
+\index{CGB::Position@{CGB::Position}!operator==@{operator==}}
+\index{operator==@{operator==}!CGB::Position@{CGB::Position}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool CGB\+::\+Position\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equality comparison operator for comparing two \doxylink{struct_c_g_b_1_1_position}{Position} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{struct_c_g_b_1_1_position}{Position} object to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if both x and y coordinates of both \doxylink{struct_c_g_b_1_1_position}{Position} objects are equal, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{struct_c_g_b_1_1_position_a7e5aaa43f4582edefb6e362429db9e6c}\label{struct_c_g_b_1_1_position_a7e5aaa43f4582edefb6e362429db9e6c} 
+\index{CGB::Position@{CGB::Position}!operator==@{operator==}}
+\index{operator==@{operator==}!CGB::Position@{CGB::Position}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool CGB\+::\+Position\+::operator== (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equality comparison operator for comparing a \doxylink{struct_c_g_b_1_1_position}{Position} with an integer value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The integer value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if both x and y coordinates of the \doxylink{struct_c_g_b_1_1_position}{Position} are equal to the value, otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{_position_8h}{Position.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\doxysection{CGB\+::Objects\+List\+::Object Struct Reference}
+\hypertarget{struct_c_g_b_1_1_objects_list_1_1_object}{}\label{struct_c_g_b_1_1_objects_list_1_1_object}\index{CGB::ObjectsList::Object@{CGB::ObjectsList::Object}}
+
+
+The \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} struct represents an object in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}.  
+
+
+
+
+{\ttfamily \#include $<$Object\+List.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_c_g_b_1_1_objects_list_1_1_object_a2e2582d2eb5c29da5e8c589296e7087a}\label{struct_c_g_b_1_1_objects_list_1_1_object_a2e2582d2eb5c29da5e8c589296e7087a} 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a76c47d867ca8e51f229625af7d85f991}{Object}} (const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}{obj}}, const std\+::string \&\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a40467ca04a0fe23c984028d24ddac971}{personal\+Code}})
+\begin{DoxyCompactList}\small\item\em Constructor. Creates an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} with the given \doxylink{class_c_g_b_1_1_world_object}{World\+Object} and personal code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_ae2be1e3c415386a47641cef7e4593c73}{operator=}} (const \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}\label{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4} 
+\mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} {\bfseries obj}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} stored in the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_c_g_b_1_1_objects_list_1_1_object_a40467ca04a0fe23c984028d24ddac971}\label{struct_c_g_b_1_1_objects_list_1_1_object_a40467ca04a0fe23c984028d24ddac971} 
+std\+::string {\bfseries personal\+Code}
+\begin{DoxyCompactList}\small\item\em The personal code associated with the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} (optional). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} struct represents an object in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_c_g_b_1_1_objects_list_1_1_object_a76c47d867ca8e51f229625af7d85f991}\label{struct_c_g_b_1_1_objects_list_1_1_object_a76c47d867ca8e51f229625af7d85f991} 
+\index{CGB::ObjectsList::Object@{CGB::ObjectsList::Object}!Object@{Object}}
+\index{Object@{Object}!CGB::ObjectsList::Object@{CGB::ObjectsList::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily CGB\+::\+Objects\+List\+::\+Object\+::\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{obj,  }\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. Creates an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} with the given \doxylink{class_c_g_b_1_1_world_object}{World\+Object} and personal code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to store in the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}. \\
+\hline
+{\em personal\+Code} & The personal code associated with the object (default is an empty string). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_c_g_b_1_1_objects_list_1_1_object_ae2be1e3c415386a47641cef7e4593c73}\label{struct_c_g_b_1_1_objects_list_1_1_object_ae2be1e3c415386a47641cef7e4593c73} 
+\index{CGB::ObjectsList::Object@{CGB::ObjectsList::Object}!operator=@{operator=}}
+\index{operator=@{operator=}!CGB::ObjectsList::Object@{CGB::ObjectsList::Object}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& CGB\+::\+Objects\+List\+::\+Object\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator for the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} to copy from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} after assignment. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{_object_list_8h}{Object\+List.\+h}}\end{DoxyCompactItemize}

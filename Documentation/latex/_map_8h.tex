@@ -1,0 +1,62 @@
+\doxysection{Headers/\+Map.h File Reference}
+\hypertarget{_map_8h}{}\label{_map_8h}\index{Headers/Map.h@{Headers/Map.h}}
+
+
+This file contains the declaration of the \doxylink{struct_c_g_b_1_1_size_map}{CGB\+::\+Size\+Map} struct, \doxylink{_map_8h_a3eafd2430563ac24b391ba856d83b200}{CGB\+::\+Symbol} enum, and \doxylink{class_c_g_b_1_1_map}{CGB\+::\+Map} class.  
+
+
+{\ttfamily \#include \"{}Object\+List.\+h\"{}}\newline
+{\ttfamily \#include \"{}Position.\+h\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{CGB\+::\+Size\+Map}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{struct_c_g_b_1_1_size_map}{Size\+Map} struct represents the size of the game map. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_g_b_1_1_map}{CGB\+::\+Map}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_c_g_b_1_1_map}{Map} class represents the game map and manages the world objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200}{CGB\+::\+Symbol}} \{ \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200afbe0990b49fb9b0e7185b5dede4d9b3a}{CGB\+::\+WALL}} = \textquotesingle{}\#\textquotesingle{}
+, \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200a4e61c0a8ecb784a5b994efe44454ab29}{CGB\+::\+SPACE}} = \textquotesingle{} \textquotesingle{}
+, \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200a8f7710ab4f83a9a0f96ba3513f3503bf}{CGB\+::\+PLAYER}} = \textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{}
+, \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200a6bb236d263d7e4441f78437acc1eab9c}{CGB\+::\+APPLE}} = \textquotesingle{}0\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em The Symbol enum represents different symbols used in the game map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the declaration of the \doxylink{struct_c_g_b_1_1_size_map}{CGB\+::\+Size\+Map} struct, \doxylink{_map_8h_a3eafd2430563ac24b391ba856d83b200}{CGB\+::\+Symbol} enum, and \doxylink{class_c_g_b_1_1_map}{CGB\+::\+Map} class. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_map_8h_a3eafd2430563ac24b391ba856d83b200}\label{_map_8h_a3eafd2430563ac24b391ba856d83b200} 
+\index{Map.h@{Map.h}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!Map.h@{Map.h}}
+\doxysubsubsection{\texorpdfstring{Symbol}{Symbol}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200}{CGB\+::\+Symbol}}}
+
+
+
+The Symbol enum represents different symbols used in the game map. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WALL@{WALL}!Map.h@{Map.h}}\index{Map.h@{Map.h}!WALL@{WALL}}}\Hypertarget{_map_8h_a3eafd2430563ac24b391ba856d83b200afbe0990b49fb9b0e7185b5dede4d9b3a}\label{_map_8h_a3eafd2430563ac24b391ba856d83b200afbe0990b49fb9b0e7185b5dede4d9b3a} 
+WALL&The symbol for walls. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPACE@{SPACE}!Map.h@{Map.h}}\index{Map.h@{Map.h}!SPACE@{SPACE}}}\Hypertarget{_map_8h_a3eafd2430563ac24b391ba856d83b200a4e61c0a8ecb784a5b994efe44454ab29}\label{_map_8h_a3eafd2430563ac24b391ba856d83b200a4e61c0a8ecb784a5b994efe44454ab29} 
+SPACE&The symbol for empty spaces. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER@{PLAYER}!Map.h@{Map.h}}\index{Map.h@{Map.h}!PLAYER@{PLAYER}}}\Hypertarget{_map_8h_a3eafd2430563ac24b391ba856d83b200a8f7710ab4f83a9a0f96ba3513f3503bf}\label{_map_8h_a3eafd2430563ac24b391ba856d83b200a8f7710ab4f83a9a0f96ba3513f3503bf} 
+PLAYER&The symbol for the player. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{APPLE@{APPLE}!Map.h@{Map.h}}\index{Map.h@{Map.h}!APPLE@{APPLE}}}\Hypertarget{_map_8h_a3eafd2430563ac24b391ba856d83b200a6bb236d263d7e4441f78437acc1eab9c}\label{_map_8h_a3eafd2430563ac24b391ba856d83b200a6bb236d263d7e4441f78437acc1eab9c} 
+APPLE&The symbol for apples. \\
+\hline
+
+\end{DoxyEnumFields}

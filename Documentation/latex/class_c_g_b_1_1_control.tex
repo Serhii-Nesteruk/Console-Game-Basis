@@ -1,0 +1,310 @@
+\doxysection{CGB\+::Control Class Reference}
+\hypertarget{class_c_g_b_1_1_control}{}\label{class_c_g_b_1_1_control}\index{CGB::Control@{CGB::Control}}
+
+
+The \doxylink{class_c_g_b_1_1_control}{Control} class handles player input and controls the movement of World\+Objects.  
+
+
+
+
+{\ttfamily \#include $<$Control.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27}{Control\+Mode}} \{ \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27a2ee75675fc8b156d128a216d00117c2a}{KEYS\+\_\+\+STICKING}}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27ae768486108440c53411ca228b8f68faa}{DEFAULT}}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27a33fa9c3ddda73dad3e5f17358dc7e07f}{SOLID\+\_\+\+WALL}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum representing different control modes for the player. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386}{Direction}} \{ \mbox{\hyperlink{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386a5f9391a20819a12e5bc55c8955d9504e}{LEFT}}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386acaf4dae3eea435ea2a81e93d008ca906}{RIGHT}}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386a9d0229beb0268f3b3a96090837390e60}{UP}}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386afce666f4d72be29f659fb6aa68e87344}{DOWN}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum representing different directions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54}{Keyboard}} \{ \newline
+{\bfseries Q}
+, {\bfseries W}
+, {\bfseries E}
+, {\bfseries R}
+, \newline
+{\bfseries T}
+, {\bfseries Y}
+, {\bfseries U}
+, {\bfseries I}
+, \newline
+{\bfseries O}
+, {\bfseries P}
+, {\bfseries A}
+, {\bfseries S}
+, \newline
+{\bfseries D}
+, {\bfseries F}
+, {\bfseries G}
+, {\bfseries H}
+, \newline
+{\bfseries J}
+, {\bfseries K}
+, {\bfseries L}
+, {\bfseries Z}
+, \newline
+{\bfseries X}
+, {\bfseries C}
+, {\bfseries V}
+, {\bfseries B}
+, \newline
+{\bfseries N}
+, {\bfseries M}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a1d75768caf2e62d3b6432bb8526b7bbb}{SPACE}}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a393a8cd19fdccf6f32d498eec3a9e4bb}{ESC}}
+, \newline
+\mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a6b5a84c8ea9e0832e71b2604df20bf90}{CTRL}}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54ac56c6e65244c66ef3db743407a3274ea}{FN}}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a9496a7b8d17906c2c55d9b5324358faf}{ALT}}
+, \mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a380159f0f797f57a74feca9e1c0ec364}{NONE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum representing different keyboard keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_g_b_1_1_control_a58a95de65d9d5111e1243652faa531dc}\label{class_c_g_b_1_1_control_a58a95de65d9d5111e1243652faa531dc} 
+{\bfseries Control} ()=delete
+\begin{DoxyCompactList}\small\item\em Deleted default constructor. There\textquotesingle{}s no default instance of \doxylink{class_c_g_b_1_1_control}{Control}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_g_b_1_1_control_af7512c466fe2cf89bae963dd679daf9f}{Control}} (\mbox{\hyperlink{class_c_g_b_1_1_map}{Map}} \&map)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_c_g_b_1_1_control}{Control} object and connects it to a map. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_control_a17e775f7a6bace0b849ca1e6de12fdf5}\label{class_c_g_b_1_1_control_a17e775f7a6bace0b849ca1e6de12fdf5} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Control} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_control_a608e0d88904d4d72f34b8d34a95a27f5}{connect\+To\+Map}} (\mbox{\hyperlink{class_c_g_b_1_1_map}{Map}} \&map)
+\begin{DoxyCompactList}\small\item\em Connects the \doxylink{class_c_g_b_1_1_control}{Control} object to a \doxylink{class_c_g_b_1_1_map}{Map}. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_control_af11dc9d24427a02ca4cfd96eb96d0d3d}\label{class_c_g_b_1_1_control_af11dc9d24427a02ca4cfd96eb96d0d3d} 
+void {\bfseries press\+Key} ()
+\begin{DoxyCompactList}\small\item\em Handles the key press event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_control_ae28fcddb653970c99def843a680cc0c4}{move}} (const \mbox{\hyperlink{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386}{Direction}} \&direction, \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&obj, const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Moves a \doxylink{class_c_g_b_1_1_world_object}{World\+Object} in the specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_control_af317ee5e65532663224e3fa4d12d44c9}{set\+Player\+Control\+Mode}} (const \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27}{Control\+Mode}} \&control\+Mode)
+\begin{DoxyCompactList}\small\item\em Sets the player control mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27}{Control\+Mode}} \mbox{\hyperlink{class_c_g_b_1_1_control_a895fd2589fa51d0e90cd32aeafa0c04d}{get\+Player\+Control\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current player control mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_control_aff32fe8ab918f09ec466dc48976d17bf}{check\+Wall}} (\mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&player, const \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27}{Control\+Mode}} \&wall\+Condition)
+\begin{DoxyCompactList}\small\item\em Checks for collision with a wall based on the control mode. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_g_b_1_1_control_a4922c46298d82020df4e57afa0764bf9}{is\+Key\+Pressed}} (const \mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54}{Keyboard}} \&key)
+\begin{DoxyCompactList}\small\item\em Checks if a specific keyboard key is currently pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_c_g_b_1_1_control}{Control} class handles player input and controls the movement of World\+Objects. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27}\label{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27} 
+\index{CGB::Control@{CGB::Control}!ControlMode@{ControlMode}}
+\index{ControlMode@{ControlMode}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{ControlMode}{ControlMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27}{CGB\+::\+Control\+::\+Control\+Mode}}}
+
+
+
+Enum representing different control modes for the player. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYS\_STICKING@{KEYS\_STICKING}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!KEYS\_STICKING@{KEYS\_STICKING}}}\Hypertarget{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27a2ee75675fc8b156d128a216d00117c2a}\label{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27a2ee75675fc8b156d128a216d00117c2a} 
+KEYS\+\_\+\+STICKING&\doxylink{class_c_g_b_1_1_control}{Control} mode where keys are sticky (held down). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFAULT@{DEFAULT}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!DEFAULT@{DEFAULT}}}\Hypertarget{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27ae768486108440c53411ca228b8f68faa}\label{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27ae768486108440c53411ca228b8f68faa} 
+DEFAULT&Default control mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOLID\_WALL@{SOLID\_WALL}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!SOLID\_WALL@{SOLID\_WALL}}}\Hypertarget{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27a33fa9c3ddda73dad3e5f17358dc7e07f}\label{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27a33fa9c3ddda73dad3e5f17358dc7e07f} 
+SOLID\+\_\+\+WALL&\doxylink{class_c_g_b_1_1_control}{Control} mode with solid walls (collision stops movement). \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386}\label{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386} 
+\index{CGB::Control@{CGB::Control}!Direction@{Direction}}
+\index{Direction@{Direction}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386}{CGB\+::\+Control\+::\+Direction}}}
+
+
+
+Enum representing different directions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!LEFT@{LEFT}}}\Hypertarget{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386a5f9391a20819a12e5bc55c8955d9504e}\label{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386a5f9391a20819a12e5bc55c8955d9504e} 
+LEFT&Left direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!RIGHT@{RIGHT}}}\Hypertarget{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386acaf4dae3eea435ea2a81e93d008ca906}\label{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386acaf4dae3eea435ea2a81e93d008ca906} 
+RIGHT&Right direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UP@{UP}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!UP@{UP}}}\Hypertarget{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386a9d0229beb0268f3b3a96090837390e60}\label{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386a9d0229beb0268f3b3a96090837390e60} 
+UP&Up direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOWN@{DOWN}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!DOWN@{DOWN}}}\Hypertarget{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386afce666f4d72be29f659fb6aa68e87344}\label{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386afce666f4d72be29f659fb6aa68e87344} 
+DOWN&Down direction. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54}\label{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54} 
+\index{CGB::Control@{CGB::Control}!Keyboard@{Keyboard}}
+\index{Keyboard@{Keyboard}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{Keyboard}{Keyboard}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54}{CGB\+::\+Control\+::\+Keyboard}}}
+
+
+
+Enum representing different keyboard keys. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPACE@{SPACE}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!SPACE@{SPACE}}}\Hypertarget{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a1d75768caf2e62d3b6432bb8526b7bbb}\label{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a1d75768caf2e62d3b6432bb8526b7bbb} 
+SPACE&Spacebar key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ESC@{ESC}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!ESC@{ESC}}}\Hypertarget{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a393a8cd19fdccf6f32d498eec3a9e4bb}\label{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a393a8cd19fdccf6f32d498eec3a9e4bb} 
+ESC&Escape key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CTRL@{CTRL}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!CTRL@{CTRL}}}\Hypertarget{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a6b5a84c8ea9e0832e71b2604df20bf90}\label{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a6b5a84c8ea9e0832e71b2604df20bf90} 
+CTRL&\doxylink{class_c_g_b_1_1_control}{Control} key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FN@{FN}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!FN@{FN}}}\Hypertarget{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54ac56c6e65244c66ef3db743407a3274ea}\label{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54ac56c6e65244c66ef3db743407a3274ea} 
+FN&Function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALT@{ALT}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!ALT@{ALT}}}\Hypertarget{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a9496a7b8d17906c2c55d9b5324358faf}\label{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a9496a7b8d17906c2c55d9b5324358faf} 
+ALT&Alt key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!CGB::Control@{CGB::Control}}\index{CGB::Control@{CGB::Control}!NONE@{NONE}}}\Hypertarget{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a380159f0f797f57a74feca9e1c0ec364}\label{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54a380159f0f797f57a74feca9e1c0ec364} 
+NONE&No key (default value). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_g_b_1_1_control_af7512c466fe2cf89bae963dd679daf9f}\label{class_c_g_b_1_1_control_af7512c466fe2cf89bae963dd679daf9f} 
+\index{CGB::Control@{CGB::Control}!Control@{Control}}
+\index{Control@{Control}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{Control()}{Control()}}
+{\footnotesize\ttfamily CGB\+::\+Control\+::\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_g_b_1_1_map}{Map}} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{class_c_g_b_1_1_control}{Control} object and connects it to a map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The \doxylink{class_c_g_b_1_1_map}{Map} object to connect to. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_g_b_1_1_control_aff32fe8ab918f09ec466dc48976d17bf}\label{class_c_g_b_1_1_control_aff32fe8ab918f09ec466dc48976d17bf} 
+\index{CGB::Control@{CGB::Control}!checkWall@{checkWall}}
+\index{checkWall@{checkWall}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{checkWall()}{checkWall()}}
+{\footnotesize\ttfamily void CGB\+::\+Control\+::check\+Wall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{player,  }\item[{const \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27}{Control\+Mode}} \&}]{wall\+Condition }\end{DoxyParamCaption})}
+
+
+
+Checks for collision with a wall based on the control mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} representing the player. \\
+\hline
+{\em wall\+Condition} & The Control\+Mode to consider for the wall condition. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_control_a608e0d88904d4d72f34b8d34a95a27f5}\label{class_c_g_b_1_1_control_a608e0d88904d4d72f34b8d34a95a27f5} 
+\index{CGB::Control@{CGB::Control}!connectToMap@{connectToMap}}
+\index{connectToMap@{connectToMap}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{connectToMap()}{connectToMap()}}
+{\footnotesize\ttfamily void CGB\+::\+Control\+::connect\+To\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_g_b_1_1_map}{Map}} \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Connects the \doxylink{class_c_g_b_1_1_control}{Control} object to a \doxylink{class_c_g_b_1_1_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The \doxylink{class_c_g_b_1_1_map}{Map} object to connect to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_control_a895fd2589fa51d0e90cd32aeafa0c04d}\label{class_c_g_b_1_1_control_a895fd2589fa51d0e90cd32aeafa0c04d} 
+\index{CGB::Control@{CGB::Control}!getPlayerControlMode@{getPlayerControlMode}}
+\index{getPlayerControlMode@{getPlayerControlMode}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{getPlayerControlMode()}{getPlayerControlMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27}{Control\+Mode}} CGB\+::\+Control\+::get\+Player\+Control\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current player control mode. 
+
+\begin{DoxyReturn}{Returns}
+The current Control\+Mode. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_control_a4922c46298d82020df4e57afa0764bf9}\label{class_c_g_b_1_1_control_a4922c46298d82020df4e57afa0764bf9} 
+\index{CGB::Control@{CGB::Control}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}}
+{\footnotesize\ttfamily bool CGB\+::\+Control\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_g_b_1_1_control_aa11f0649891710bcb6cfd139976c2c54}{Keyboard}} \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Checks if a specific keyboard key is currently pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The Keyboard key to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the key is pressed, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_control_ae28fcddb653970c99def843a680cc0c4}\label{class_c_g_b_1_1_control_ae28fcddb653970c99def843a680cc0c4} 
+\index{CGB::Control@{CGB::Control}!move@{move}}
+\index{move@{move}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void CGB\+::\+Control\+::move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_g_b_1_1_control_a756b664472822a1c77c150c2fdac4386}{Direction}} \&}]{direction,  }\item[{\mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{obj,  }\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})}
+
+
+
+Moves a \doxylink{class_c_g_b_1_1_world_object}{World\+Object} in the specified direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction in which to move the \doxylink{class_c_g_b_1_1_world_object}{World\+Object}. \\
+\hline
+{\em obj} & The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to move. \\
+\hline
+{\em personal\+Code} & A string representing a personal code for the movement (not used in the current implementation). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_control_af317ee5e65532663224e3fa4d12d44c9}\label{class_c_g_b_1_1_control_af317ee5e65532663224e3fa4d12d44c9} 
+\index{CGB::Control@{CGB::Control}!setPlayerControlMode@{setPlayerControlMode}}
+\index{setPlayerControlMode@{setPlayerControlMode}!CGB::Control@{CGB::Control}}
+\doxysubsubsection{\texorpdfstring{setPlayerControlMode()}{setPlayerControlMode()}}
+{\footnotesize\ttfamily void CGB\+::\+Control\+::set\+Player\+Control\+Mode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_g_b_1_1_control_a7f9ecd19b04dae6348e3bcf52ed34f27}{Control\+Mode}} \&}]{control\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the player control mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control\+Mode} & The Control\+Mode to set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{_control_8h}{Control.\+h}}\end{DoxyCompactItemize}

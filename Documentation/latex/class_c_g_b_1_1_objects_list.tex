@@ -1,0 +1,250 @@
+\doxysection{CGB\+::Objects\+List Class Reference}
+\hypertarget{class_c_g_b_1_1_objects_list}{}\label{class_c_g_b_1_1_objects_list}\index{CGB::ObjectsList@{CGB::ObjectsList}}
+
+
+The \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} class represents a list of objects in the game world.  
+
+
+
+
+{\ttfamily \#include $<$Object\+List.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} struct represents an object in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_g_b_1_1_objects_list_ae376e394787ad6aabca096eeaee1f92c}\label{class_c_g_b_1_1_objects_list_ae376e394787ad6aabca096eeaee1f92c} 
+{\bfseries Objects\+List} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates an empty \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_objects_list_abcd239264262459bf0fdbbb6c11686a3}\label{class_c_g_b_1_1_objects_list_abcd239264262459bf0fdbbb6c11686a3} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Objects\+List} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a694a05a51316932ce2f7205890c43c65}{find}} (const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Finds an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} with the specified personal code in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a7e55c77d56cc32567821786422100168}{reset}} (const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&where, const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&what, const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Resets the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} at the specified position in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a65db8e1ad0b98c71849a5d0a9877e4fb}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Overloaded subscript operator to access Objects in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} by index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& \mbox{\hyperlink{class_c_g_b_1_1_objects_list_ac380f8d0396805245eb8139fdba530cb}{at}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em Accesses an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} at the specified index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a302aaa093ce0951596938dd25258c7d8}{empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} is empty. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_g_b_1_1_objects_list_ae72b85469af31fcd1d0c86d294eb3346}{size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of Objects in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a4cf9fdc672000ad1ba0e162b0e95d757}{resize}} (unsigned int \mbox{\hyperlink{class_c_g_b_1_1_objects_list_ae72b85469af31fcd1d0c86d294eb3346}{size}})
+\begin{DoxyCompactList}\small\item\em Resizes the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} to the specified size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a29272a92cd972a24e3352a9d49a4e87e}{front}} ()
+\begin{DoxyCompactList}\small\item\em Gets a reference to the first \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a94e769b3233feffa5b11f5e395aea63a}{back}} ()
+\begin{DoxyCompactList}\small\item\em Gets a reference to the last \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_objects_list_aa61ce2e39a8262bcfd9460570b2303da}{emplace\+\_\+back}} (const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&world\+Obj, const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Adds an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} to the end of the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} using emplace\+\_\+back. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_g_b_1_1_objects_list_ad55a7b6c7ab41d63a816973a9a64126d}{push\+\_\+back}} (const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&world\+Obj, const std\+::string \&personal\+Code)
+\begin{DoxyCompactList}\small\item\em Adds an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} to the end of the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} using push\+\_\+back. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_g_b_1_1_objects_list_a2a4aeec008a97358c74c0479dc3571e9}\label{class_c_g_b_1_1_objects_list_a2a4aeec008a97358c74c0479dc3571e9} 
+void {\bfseries pop\+\_\+back} ()
+\begin{DoxyCompactList}\small\item\em Removes the last \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} from the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} class represents a list of objects in the game world. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_g_b_1_1_objects_list_ac380f8d0396805245eb8139fdba530cb}\label{class_c_g_b_1_1_objects_list_ac380f8d0396805245eb8139fdba530cb} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!at@{at}}
+\index{at@{at}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& CGB\+::\+Objects\+List\+::at (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Accesses an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} at the specified index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} at the specified index. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & If the index is out of range. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_c_g_b_1_1_objects_list_a94e769b3233feffa5b11f5e395aea63a}\label{class_c_g_b_1_1_objects_list_a94e769b3233feffa5b11f5e395aea63a} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!back@{back}}
+\index{back@{back}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& CGB\+::\+Objects\+List\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a reference to the last \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the last \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_objects_list_aa61ce2e39a8262bcfd9460570b2303da}\label{class_c_g_b_1_1_objects_list_aa61ce2e39a8262bcfd9460570b2303da} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!emplace\_back@{emplace\_back}}
+\index{emplace\_back@{emplace\_back}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{emplace\_back()}{emplace\_back()}}
+{\footnotesize\ttfamily void CGB\+::\+Objects\+List\+::emplace\+\_\+back (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{world\+Obj,  }\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})}
+
+
+
+Adds an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} to the end of the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} using emplace\+\_\+back. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+Obj} & The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to add to the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \\
+\hline
+{\em personal\+Code} & The personal code associated with the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} (optional). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_objects_list_a302aaa093ce0951596938dd25258c7d8}\label{class_c_g_b_1_1_objects_list_a302aaa093ce0951596938dd25258c7d8} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!empty@{empty}}
+\index{empty@{empty}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool CGB\+::\+Objects\+List\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} is empty, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_objects_list_a694a05a51316932ce2f7205890c43c65}\label{class_c_g_b_1_1_objects_list_a694a05a51316932ce2f7205890c43c65} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!find@{find}}
+\index{find@{find}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& CGB\+::\+Objects\+List\+::find (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})}
+
+
+
+Finds an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} with the specified personal code in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em personal\+Code} & The personal code to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} with the matching personal code. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::exception} & If no \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} with the specified personal code is found. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_c_g_b_1_1_objects_list_a29272a92cd972a24e3352a9d49a4e87e}\label{class_c_g_b_1_1_objects_list_a29272a92cd972a24e3352a9d49a4e87e} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!front@{front}}
+\index{front@{front}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& CGB\+::\+Objects\+List\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a reference to the first \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the first \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_objects_list_a65db8e1ad0b98c71849a5d0a9877e4fb}\label{class_c_g_b_1_1_objects_list_a65db8e1ad0b98c71849a5d0a9877e4fb} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}} \& CGB\+::\+Objects\+List\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Overloaded subscript operator to access Objects in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} at the specified index. 
+\end{DoxyReturn}
+\Hypertarget{class_c_g_b_1_1_objects_list_ad55a7b6c7ab41d63a816973a9a64126d}\label{class_c_g_b_1_1_objects_list_ad55a7b6c7ab41d63a816973a9a64126d} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void CGB\+::\+Objects\+List\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{world\+Obj,  }\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})}
+
+
+
+Adds an \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} to the end of the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} using push\+\_\+back. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+Obj} & The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to add to the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \\
+\hline
+{\em personal\+Code} & The personal code associated with the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} (optional). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_objects_list_a7e55c77d56cc32567821786422100168}\label{class_c_g_b_1_1_objects_list_a7e55c77d56cc32567821786422100168} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!reset@{reset}}
+\index{reset@{reset}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void CGB\+::\+Objects\+List\+::reset (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}} \&}]{where,  }\item[{const \mbox{\hyperlink{class_c_g_b_1_1_world_object}{World\+Object}} \&}]{what,  }\item[{const std\+::string \&}]{personal\+Code }\end{DoxyParamCaption})}
+
+
+
+Resets the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} at the specified position in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & The \doxylink{struct_c_g_b_1_1_position}{Position} where the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} should be reset. \\
+\hline
+{\em what} & The \doxylink{class_c_g_b_1_1_world_object}{World\+Object} to set at the specified position. \\
+\hline
+{\em personal\+Code} & The personal code to set for the \doxylink{struct_c_g_b_1_1_objects_list_1_1_object}{Object} (optional). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_g_b_1_1_objects_list_a4cf9fdc672000ad1ba0e162b0e95d757}\label{class_c_g_b_1_1_objects_list_a4cf9fdc672000ad1ba0e162b0e95d757} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!resize@{resize}}
+\index{resize@{resize}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void CGB\+::\+Objects\+List\+::resize (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Resizes the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List} to the specified size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The new size of the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::exception} & If the new size is smaller than the current size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_c_g_b_1_1_objects_list_ae72b85469af31fcd1d0c86d294eb3346}\label{class_c_g_b_1_1_objects_list_ae72b85469af31fcd1d0c86d294eb3346} 
+\index{CGB::ObjectsList@{CGB::ObjectsList}!size@{size}}
+\index{size@{size}!CGB::ObjectsList@{CGB::ObjectsList}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily unsigned int CGB\+::\+Objects\+List\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the number of Objects in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. 
+
+\begin{DoxyReturn}{Returns}
+The number of Objects in the \doxylink{class_c_g_b_1_1_objects_list}{Objects\+List}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{_object_list_8h}{Object\+List.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+\doxysection{Position.\+h}
+\hypertarget{_position_8h_source}{}\label{_position_8h_source}\index{Headers/Position.h@{Headers/Position.h}}
+\mbox{\hyperlink{_position_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }CGB\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_position_af47a25b0765dfa2cd70aaa881776b58a}{Position}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_position_aaefa830f79727e888c4ab349f0dccf6f}{Position}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}})\ :\ \mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}}(\mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}}),\ \mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}}(\mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}})\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_position_aff78584b8d2587de4f4c184eaada7955}{Position}}(\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&\mbox{\hyperlink{struct_c_g_b_1_1_position_a1dea3890bab6293e08f3243b47d7d7b4}{operator=}}(\mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_position_acd8b5552210c089d43303f07d0829622}{Position}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&other)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_position_a1dea3890bab6293e08f3243b47d7d7b4}{operator=}}(other);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&\mbox{\hyperlink{struct_c_g_b_1_1_position_a8512c590bab9ca591650a6dc271ad26f}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&other)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}}\ =\ other.\mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}}\ =\ other.\mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_c_g_b_1_1_position_a7e5aaa43f4582edefb6e362429db9e6c}{operator==}}(\textcolor{keywordtype}{int}\ value)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}}\ ==\ value\ \&\&\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}}\ ==\ value;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_c_g_b_1_1_position_a7f6bddf1f12f59628daf5e265224c272}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}}\ ==\ other.\mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}}\ \&\&\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}}\ ==\ other.\mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_g_b_1_1_position_ad7c4e429f18372874f9ebdcafce1f775}{x}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_g_b_1_1_position_aeac4ff9c584372a87d9f3e18796b7e2a}{y}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,60 @@
+\doxysection{Object\+List.\+h}
+\hypertarget{_object_list_8h_source}{}\label{_object_list_8h_source}\index{Headers/ObjectList.h@{Headers/ObjectList.h}}
+\mbox{\hyperlink{_object_list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_world_object_8h}{WorldObject.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }CGB\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_g_b_1_1_objects_list}{ObjectsList}}\ final\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a2e2582d2eb5c29da5e8c589296e7087a}{Object}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a76c47d867ca8e51f229625af7d85f991}{Object}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_c_g_b_1_1_world_object}{WorldObject}}\&\ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}{obj}},\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a40467ca04a0fe23c984028d24ddac971}{personalCode}})}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}{obj}}(\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}{obj}}),\ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a40467ca04a0fe23c984028d24ddac971}{personalCode}}(\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a40467ca04a0fe23c984028d24ddac971}{personalCode}})\ \{\}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}}\&\ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_ae2be1e3c415386a47641cef7e4593c73}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}}\&\ other);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_g_b_1_1_world_object}{WorldObject}}\ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}{obj}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a40467ca04a0fe23c984028d24ddac971}{personalCode}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_ae376e394787ad6aabca096eeaee1f92c}{ObjectsList}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_abcd239264262459bf0fdbbb6c11686a3}{\string~ObjectsList}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}}\&\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a694a05a51316932ce2f7205890c43c65}{find}}(\textcolor{keyword}{const}\ std::string\&\ personalCode);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a7e55c77d56cc32567821786422100168}{reset}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&where,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_c_g_b_1_1_world_object}{WorldObject}}\ \&what,\ \textcolor{keyword}{const}\ std::string\ \&personalCode);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}}\&\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a65db8e1ad0b98c71849a5d0a9877e4fb}{operator[]}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}}\&\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_ac380f8d0396805245eb8139fdba530cb}{at}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a302aaa093ce0951596938dd25258c7d8}{empty}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_ae72b85469af31fcd1d0c86d294eb3346}{size}}();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a4cf9fdc672000ad1ba0e162b0e95d757}{resize}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_ae72b85469af31fcd1d0c86d294eb3346}{size}});}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}}\&\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a29272a92cd972a24e3352a9d49a4e87e}{front}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object}{Object}}\&\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a94e769b3233feffa5b11f5e395aea63a}{back}}();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_aa61ce2e39a8262bcfd9460570b2303da}{emplace\_back}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_c_g_b_1_1_world_object}{WorldObject}}\ \&worldObj,\ \textcolor{keyword}{const}\ std::string\ \&personalCode);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_ad55a7b6c7ab41d63a816973a9a64126d}{push\_back}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_c_g_b_1_1_world_object}{WorldObject}}\ \&worldObj,\ \textcolor{keyword}{const}\ std::string\ \&personalCode);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list_a2a4aeec008a97358c74c0479dc3571e9}{pop\_back}}();}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ std::vector<Object>\ objects;\ }
+\DoxyCodeLine{00139\ \ \ \ \ \};}
+\DoxyCodeLine{00140\ \}}
+
+\end{DoxyCode}

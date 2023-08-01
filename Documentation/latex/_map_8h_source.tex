@@ -1,0 +1,136 @@
+\doxysection{Map.\+h}
+\hypertarget{_map_8h_source}{}\label{_map_8h_source}\index{Headers/Map.h@{Headers/Map.h}}
+\mbox{\hyperlink{_map_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_object_list_8h}{ObjectList.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_position_8h}{Position.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }CGB\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a0076d349c9f58acd882ad6b4d5200133}{SizeMap}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a2dceeffec8fd50d9605d8c3822c4b829}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a534a9219767b63cdf59943e52c1a8994}{y}})\ :\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a2dceeffec8fd50d9605d8c3822c4b829}{x}}(\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a2dceeffec8fd50d9605d8c3822c4b829}{x}}),\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a534a9219767b63cdf59943e52c1a8994}{y}}(\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a534a9219767b63cdf59943e52c1a8994}{y}})\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}\ \&\mbox{\hyperlink{struct_c_g_b_1_1_size_map_af3b8bdf95fbddfd776caf72ba057b362}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}\ \&other)\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a2dceeffec8fd50d9605d8c3822c4b829}{x}}\ =\ other.\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a2dceeffec8fd50d9605d8c3822c4b829}{x}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a534a9219767b63cdf59943e52c1a8994}{y}}\ =\ other.\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a534a9219767b63cdf59943e52c1a8994}{y}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a6063dc885663d09e4a061f5027a80344}{SizeMap}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}\ \&other)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_size_map_af3b8bdf95fbddfd776caf72ba057b362}{operator=}}(other);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_adbd946689114d00238ad11a1c6c34975}{operator==}}(\textcolor{keywordtype}{int}\ value)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a2dceeffec8fd50d9605d8c3822c4b829}{x}}\ ==\ value\ \&\&\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a534a9219767b63cdf59943e52c1a8994}{y}}\ ==\ value;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a16a61f8f7a4b92d805fd445467f6b1e0}{operator<=}}(\textcolor{keywordtype}{int}\ value)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a2dceeffec8fd50d9605d8c3822c4b829}{x}}\ <=\ value\ \&\&\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a534a9219767b63cdf59943e52c1a8994}{y}}\ <=\ value;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a1c901d734ce4a3c0ad73d7ce06052c4d}{operator>=}}(\textcolor{keywordtype}{int}\ value)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a2dceeffec8fd50d9605d8c3822c4b829}{x}}\ >=\ value\ \&\&\ this-\/>\mbox{\hyperlink{struct_c_g_b_1_1_size_map_a534a9219767b63cdf59943e52c1a8994}{y}}\ >=\ value;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a2dceeffec8fd50d9605d8c3822c4b829}{x}}\ =\ 0;\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map_a534a9219767b63cdf59943e52c1a8994}{y}}\ =\ 0;\ }
+\DoxyCodeLine{00074\ \ \ \ \ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200}{Symbol}}\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200afbe0990b49fb9b0e7185b5dede4d9b3a}{WALL}}\ =\ \textcolor{charliteral}{'\#'},\ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200a4e61c0a8ecb784a5b994efe44454ab29}{SPACE}}\ =\ \textcolor{charliteral}{'\ '},\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200a8f7710ab4f83a9a0f96ba3513f3503bf}{PLAYER}}\ =\ \textcolor{charliteral}{'*'},}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_map_8h_a3eafd2430563ac24b391ba856d83b200a6bb236d263d7e4441f78437acc1eab9c}{APPLE}}\ =\ \textcolor{charliteral}{'0'}\ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_g_b_1_1_map}{Map}}\ final\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }mapType\ =\ std::vector<std::vector<WorldObject>>;\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_g_b_1_1_map_a440f46f732d6520ae110b146ee31c05e}{Map}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a9cd981c6a8b4da1102b9f495609c4917}{Map}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}\ \&sizeMap);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_g_b_1_1_map_a0d74b3f191733676f31ca2d0501d11ff}{\string~Map}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a6f93b28f27ebf06bdead3d84dbe4e3d0}{setup}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}\ \&sizeMap);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a7262670a951eb92d3085bb37b49bde0a}{initWorldObjects}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a880281174619e5e5f7658f759151ea7a}{init}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_map_acae68391deb5e8885998687ba250e125}{update}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a5b370bffe6c3735283ff6c1540173ab8}{draw}}();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_map_af09f3006d350c2930b145e749d41a764}{objectReset}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_c_g_b_1_1_world_object}{WorldObject}}\ \&newObject,\ \textcolor{keyword}{const}\ std::string\ \&personalCode);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a58b8ea38baeedda45365a309732320c9}{getSizeMap}}()\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>sizeMap;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a22bdaafe2dc98d660be2f79d51574fcd}{setSizeMap}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}\ \&sizeMap)\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>sizeMap\ =\ sizeMap;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a319c5b5ba1b4b59370d6a7d8de9035bf}{getObjPosition}}(\textcolor{keyword}{const}\ std::string\ \&personalCode)\ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>objects.\mbox{\hyperlink{class_c_g_b_1_1_objects_list_a694a05a51316932ce2f7205890c43c65}{find}}(personalCode).\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}{obj}}.\mbox{\hyperlink{class_c_g_b_1_1_world_object_a4392ea7cd3c71805e750de4b9f29dbcb}{getPosition}}();}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_c_g_b_1_1_world_object}{WorldObject}}\ \&\mbox{\hyperlink{class_c_g_b_1_1_map_a8799decf015cbf533f10fe940d2e73d5}{getObject}}(\textcolor{keyword}{const}\ std::string\ \&personalCode)\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>objects.\mbox{\hyperlink{class_c_g_b_1_1_objects_list_a694a05a51316932ce2f7205890c43c65}{find}}(personalCode).\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}{obj}};}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a08903b113574fe9bed6ec70c172741c3}{setObjectColor}}(\textcolor{keyword}{const}\ Color\ \&color,\ \textcolor{keyword}{const}\ std::string\ \&personalCode)\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>objects.\mbox{\hyperlink{class_c_g_b_1_1_objects_list_a694a05a51316932ce2f7205890c43c65}{find}}(personalCode).\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}{obj}}.\mbox{\hyperlink{class_c_g_b_1_1_world_object_a9ef165fe110c5f9edb838c228bfc379a}{setColor}}(color);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a82bc907d37bf99fd04743c5ba35e1f46}{setObjectSymbol}}(\textcolor{keywordtype}{char}\ symbol,\ \textcolor{keyword}{const}\ std::string\ \&personalCode)\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>objects.\mbox{\hyperlink{class_c_g_b_1_1_objects_list_a694a05a51316932ce2f7205890c43c65}{find}}(personalCode).\mbox{\hyperlink{struct_c_g_b_1_1_objects_list_1_1_object_a1dc6dfce2350b1f5dfb3e331faec98f4}{obj}}.\mbox{\hyperlink{class_c_g_b_1_1_world_object_ae34dc4feb7590e1e6bf3b518c9da364a}{setSymbol}}(symbol);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_c_g_b_1_1_objects_list}{ObjectsList}}\ \mbox{\hyperlink{class_c_g_b_1_1_map_a4cd49c6403a575c34463123a72e72552}{getObjectsList}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>objects;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_c_g_b_1_1_map_ae209ea725153482fe0df1c8286fc2074}{wallCode}}\ =\ \textcolor{stringliteral}{"{}0"{}};}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_c_g_b_1_1_map_acccf0193ab4ff77df15dc4caff812d0e}{spaceCode}}\ =\ \textcolor{stringliteral}{"{}1"{}};}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ resize();}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ checkObjectsChanges();}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isWall(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isSpace(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ changeColorWall(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ changeColorAllObjects(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ changeColor(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initLeftAndRightEdge(\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initUpperAndLowerEdge(\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initWall(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_c_g_b_1_1_position}{Position}}\ \&position);}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initSpace(\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ mapType\ map\ \{\};}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}\ sizeMap\ =\ \mbox{\hyperlink{struct_c_g_b_1_1_size_map}{SizeMap}}(5,\ 5);}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_g_b_1_1_objects_list}{ObjectsList}}\ objects;}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ std::vector<std::string>\ objectsCodes\{\};}
+\DoxyCodeLine{00293\ \ \ \ \ \};}
+\DoxyCodeLine{00294\ \}}
+
+\end{DoxyCode}
